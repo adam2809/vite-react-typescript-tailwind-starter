@@ -8,30 +8,30 @@ import { Button } from '../components/ui/button'
 import { Link } from 'react-router-dom'
 
 export function CarouselPage() {
+  const images = import.meta.glob('../img/*.{png,jpg,jpeg,svg}', {
+    eager: true
+  })
   return (
     <>
-        <Carousel className="w-full max-w-xs">
-        <CarouselContent>
-            {Array.from({ length: 5 }).map((_, index) => (
+      <Carousel className="w-full max-w-xs">
+        <CarouselContent className="">
+          {Object.values(images).map((image, index) => (
             <CarouselItem key={index}>
-                <Card>
-                    <CardContent className="flex items-center justify-center p-6">
-                        <div>
-                            <span className="text-4xl font-semibold">{index + 1}</span>
-                        </div>
-                    </CardContent>
-                </Card>
+                  <img
+                    key={index}
+                    src={image.default}
+                    alt={`Image ${index + 1}`}
+                    className="rounded-lg"
+                  />
             </CarouselItem>
-            ))}
+          ))}
         </CarouselContent>
-        </Carousel>
-        <Link to="/categories">
-        <div className='flex justify-center'>
-          <Button className='mt-1 flex-auto'>
-            Zobacz więcej
-          </Button>
+      </Carousel>
+      <Link to="/categories">
+        <div className="flex justify-center">
+            <Button className="mt-3 flex-auto text-2xl py-8 uppercase font-serif tracking-widest">Menu</Button>
         </div>
-        </Link>
+      </Link>
     </>
   )
 }
