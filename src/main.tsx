@@ -3,6 +3,7 @@ import './App.css'
 import App from './App'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
+import { Button } from './components/ui/button'
 
 createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
@@ -13,14 +14,9 @@ createRoot(document.getElementById('root') as HTMLElement).render(
           path="/about"
           element={
             <>
-              <div className="text-center">
-                <h1 className="text-xl">About</h1>
-                <div>
-                  <Link to="/" className="text-purple-400 underline">
-                    Home
-                  </Link>
-                </div>
-              </div>
+              <Button>
+                <Link to="/">Go to Home</Link>
+              </Button>
             </>
           }
         />
