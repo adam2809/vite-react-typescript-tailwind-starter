@@ -7,6 +7,9 @@ import {
 import { Button } from '../components/ui/button'
 import { Link } from 'react-router-dom'
 
+interface ImageImportInterface {
+  default: string
+}
 export function CarouselPage() {
   const images = import.meta.glob('../img/*.{png,jpg,jpeg,svg}', {
     eager: true
@@ -17,12 +20,12 @@ export function CarouselPage() {
         <CarouselContent className="">
           {Object.values(images).map((image, index) => (
             <CarouselItem key={index}>
-                  <img
-                    key={index}
-                    src={image.default}
-                    alt={`Image ${index + 1}`}
-                    className="rounded-lg"
-                  />
+              <img
+                key={index}
+                src={(image as ImageImportInterface).default}
+                alt={`Image ${index + 1}`}
+                className="rounded-lg"
+              />
             </CarouselItem>
           ))}
         </CarouselContent>
