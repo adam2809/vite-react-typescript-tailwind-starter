@@ -12,7 +12,7 @@ import { Button } from './components/ui/button'
 import { AnimatePresence } from 'framer-motion'
 import FadeAnimation from './components/fade-animation'
 
-const PageRouter: React.FC = () => {
+const Router: React.FC = () => {
   const location = useLocation()
   return (
     <Routes location={location} key={location.pathname}>
@@ -40,4 +40,4 @@ const PageRouter: React.FC = () => {
   )
 }
 
-export default PageRouter
+export default Router
