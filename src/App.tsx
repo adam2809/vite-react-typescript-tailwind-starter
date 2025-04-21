@@ -3,12 +3,13 @@ import logo from './logo.svg'
 import viteLogo from './vite.svg'
 import tailwindLogo from './tailwind.svg'
 import { Link } from 'react-router-dom'
+import FadeAnimation from './components/fade-animation'
 
 function App(): ReactElement {
   const [count, setCount] = useState(0)
 
   return (
-    <div className="p-20 border shadow-xl border-gray-50 rounded-xl">
+    <FadeAnimation className="p-20 border shadow-xl border-gray-50 rounded-xl">
       <header>
         <div className="flex justify-center">
           <img src={viteLogo} className="w-32 h-32" alt="vite logo" />
@@ -68,7 +69,7 @@ function App(): ReactElement {
           </a>
         </p>
       </header>
-    </div>
+    </FadeAnimation>
   )
 }
 
