@@ -14,7 +14,6 @@ export function CarouselPage() {
         <CarouselContent>
             {Array.from({ length: 5 }).map((_, index) => (
             <CarouselItem key={index}>
-                <div className="p-1">
                 <Card>
                     <CardContent className="flex items-center justify-center p-6">
                         <div>
@@ -22,13 +21,16 @@ export function CarouselPage() {
                         </div>
                     </CardContent>
                 </Card>
-                </div>
             </CarouselItem>
             ))}
         </CarouselContent>
         </Carousel>
         <Link to="/categories">
-          <Button>Go to Categories</Button>
+        <div className='flex justify-center'>
+          <Button className='mt-1 flex-auto'>
+            Zobacz więcej
+          </Button>
+        </div>
         </Link>
     </>
   )
