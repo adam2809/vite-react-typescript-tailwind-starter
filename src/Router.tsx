@@ -1,6 +1,5 @@
 import React from 'react'
 import {
-  BrowserRouter,
   Link,
   Route,
   Routes,
@@ -9,8 +8,8 @@ import {
 
 import { Button } from './components/ui/button'
 
-import { AnimatePresence } from 'framer-motion'
 import FadeAnimation from './components/fade-animation'
+import { CarouselDemo } from './components/carousel_demo'
 
 const Router: React.FC = () => {
   const location = useLocation()
@@ -20,9 +19,7 @@ const Router: React.FC = () => {
         path="/"
         element={
           <FadeAnimation>
-            <Link to="/categories">
-              <Button>Go to Home</Button>
-            </Link>
+            <CarouselDemo />
           </FadeAnimation>
         }
       />
