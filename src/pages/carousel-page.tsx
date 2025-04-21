@@ -1,14 +1,11 @@
-import * as React from 'react'
-
 import { Card, CardContent } from '../components/ui/card'
 import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious
 } from '../components/ui/carousel'
 import { Button } from '../components/ui/button'
+import { Link } from 'react-router-dom'
 
 export function CarouselPage() {
   return (
@@ -30,7 +27,9 @@ export function CarouselPage() {
             ))}
         </CarouselContent>
         </Carousel>
-        <Button>hejo</Button>
+        <Link to="/categories">
+          <Button>Go to Categories</Button>
+        </Link>
     </>
   )
 }

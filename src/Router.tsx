@@ -28,7 +28,7 @@ const Router: React.FC = () => {
         element={
           <FadeAnimation>
             <Link to="/">
-              <Button>Go to Categories</Button>
+              <Button>Go Home</Button>
             </Link>
           </FadeAnimation>
         }
