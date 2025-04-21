@@ -28,7 +28,7 @@ const Router: React.FC = () => {
         element={
           <FadeAnimation>
             <Link to="/">
-              <Button>Go Home</Button>
+              <Button className='text-2xl py-8 px-6 uppercase font-serif tracking-widest'>Home</Button>
             </Link>
           </FadeAnimation>
         }

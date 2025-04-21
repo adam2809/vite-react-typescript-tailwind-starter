@@ -2,7 +2,7 @@ import { Card, CardContent } from '../components/ui/card'
 import {
   Carousel,
   CarouselContent,
-  CarouselItem,
+  CarouselItem
 } from '../components/ui/carousel'
 import { Button } from '../components/ui/button'
 import { Link } from 'react-router-dom'
@@ -32,7 +32,9 @@ export function CarouselPage() {
       </Carousel>
       <Link to="/categories">
         <div className="flex justify-center">
-            <Button className="mt-3 flex-auto text-2xl py-8 uppercase font-serif tracking-widest">Menu</Button>
+          <Button className="mt-3 flex-auto text-2xl py-8 uppercase font-serif tracking-widest">
+            Menu
+          </Button>
         </div>
       </Link>
     </>
