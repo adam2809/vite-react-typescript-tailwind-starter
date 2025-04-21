@@ -1,6 +1,12 @@
 import React from 'react'
 import './App.css'
-import { BrowserRouter, Link, Route, Routes, useLocation } from 'react-router-dom'
+import {
+  BrowserRouter,
+  Link,
+  Route,
+  Routes,
+  useLocation
+} from 'react-router-dom'
 import { createRoot } from 'react-dom/client'
 import { Button } from './components/ui/button'
 import App from './App'
