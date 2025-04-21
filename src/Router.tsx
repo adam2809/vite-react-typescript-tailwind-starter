@@ -9,7 +9,7 @@ import {
 import { Button } from './components/ui/button'
 
 import FadeAnimation from './components/fade-animation'
-import { CarouselDemo } from './components/carousel_demo'
+import { CarouselPage } from './pages/carousel-page'
 
 const Router: React.FC = () => {
   const location = useLocation()
@@ -19,7 +19,7 @@ const Router: React.FC = () => {
         path="/"
         element={
           <FadeAnimation>
-            <CarouselDemo />
+            <CarouselPage />
           </FadeAnimation>
         }
       />
