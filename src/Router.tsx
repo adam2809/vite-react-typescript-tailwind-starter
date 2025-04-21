@@ -14,9 +14,11 @@ const PageRouter: React.FC = () => {
             path="/"
             element={
               <FadeAnimation>
+              <Link to="/categories">
                 <Button>
-                  <Link to="/categories">Go to Home</Link>
+                  Go to Home
                 </Button>
+              </Link>
               </FadeAnimation>
             }
           />
@@ -24,9 +26,11 @@ const PageRouter: React.FC = () => {
             path="/categories"
             element={
               <FadeAnimation>
-                <Button>
-                  <Link to="/">Go to Categories</Link>
-                </Button>
+                <Link to="/">
+                  <Button>
+                    Go to Categories
+                  </Button>
+                </Link>
               </FadeAnimation>
             }
           />
