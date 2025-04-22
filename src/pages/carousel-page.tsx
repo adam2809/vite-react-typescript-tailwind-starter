@@ -5,6 +5,7 @@ import {
   CarouselItem
 } from '../components/ui/carousel'
 import { Button } from '../components/ui/button'
+import { Separator } from '../components/ui/separator'
 import { Link } from 'react-router-dom'
 
 interface ImageImportInterface {
@@ -30,9 +31,10 @@ export function CarouselPage() {
           ))}
         </CarouselContent>
       </Carousel>
+      <Separator className="my-3" />
       <Link to="/categories">
         <div className="flex justify-center">
-          <Button className="mt-3 flex-auto text-2xl py-8 uppercase font-serif tracking-widest">
+          <Button className="flex-auto text-2xl py-8 uppercase font-serif tracking-widest">
             Menu
           </Button>
         </div>
