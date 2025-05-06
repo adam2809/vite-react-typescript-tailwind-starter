@@ -10,7 +10,7 @@ import { Card } from './components/ui/card'
 const Router: React.FC = () => {
   const location = useLocation()
   return (
-    <Card className="p-3 h-9/10">
+    <Card className="p-3">
       <Routes location={location} key={location.pathname}>
         <Route
           path="/"
